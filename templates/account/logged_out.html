@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <div class="m-4 p-4 flex justify-content-center">
+        
+<h4 class="m-4 w-25 text-wrap flex justify-content-center">You have successfully logged out now . If you want to login again than click here
+    <a class="btn btn-success " href="{% url 'account:login' %}">Login Again</a>
+</h4>
+
+
+    </div>
+</div>
+{% endblock content %}
+
+
+
+

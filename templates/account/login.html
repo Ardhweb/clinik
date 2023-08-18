@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post" class="text-center bg-light p-5 shadow p-3 mb-5 bg-body bg-subtle rounded" style="width: 350px; height: 25%; margin: 0 auto ; margin-top:10%;">
+    <h3 class="text-center">Login Form</h3>
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" class="btn btn-primary" value="Log in"></p>
+    </form>
+
+
+{% endblock content %}
+
+
+
+

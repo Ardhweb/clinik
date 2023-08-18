@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Index</p>
+<div class="d-flex flex-row mb-3">
+    <div class="p-2"><a class="btn btn-success btn-lg fw-bold">Patient</a></div>
+    <div class="p-2"><a class="btn btn-warning btn-lg fw-bold">Doctor</a></div>
+  
+  </div>
+
+  
+  <table class="table m-5 w-25">
+    <p class="fs-5 fw-bold text-center">Total Doctor's</p>
+    <thead>
+
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Doctor Email</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+        
+    {% for doctors in doctors  %}
+            
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{doctors.email}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+ 
+  <table class="table m-5 w-25">
+    <p class="fs-5 fw-bold text-center">Total Patient's</p>
+    <thead>
+
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Patient Email</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+        
+    {% for patients in patients  %}
+            
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{patients.email}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class=" w-50  bg-secondary  text-left m-4 p-4 rounded shadow-regular mb-3 h6">
+    <form method="POST"   enctype="multipart/form-data">
+    {{ form1.as_p }}
+    <h6>Address:</h6>
+    {{ form2.as_p }}
+    {{ form3.as_p}}
+    {% csrf_token %}
+    <p><input type="submit" value="Signup" class="btn btn-warning  btn-md rounded-1 shadow"></p>
+    
+    </form>
+<div>
+   
+
+
+{% endblock content %}
+
+
+
+
